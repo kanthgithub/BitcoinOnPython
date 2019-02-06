@@ -4,9 +4,42 @@
 
 ### Mac Setup:
 
-- Verify Python version(s) and running version on MAC
+- Set Python to specific version
 
-  - https://stackoverflow.com/questions/33175827/what-version-of-python-is-on-my-mac
+  https://stackoverflow.com/questions/18425379/how-to-set-pythons-default-version-to-3-x-on-os-x
+  
+  - Changing the default python version system wide would break some applications that depend on python2.
+  - You can alias the commands in most shells, Mac OS X uses bash by default, if you also do put this into your ~/.bash_profile:
+
+  ```sh
+  alias python='python3'
+  ```
+  
+  - python command now refers to python3. 
+  - If you want the original python (that refers to python2), you can escape the alias i.e. doing \python will launch python2 leaving the alias untouched)
+
+  - If you launch interpreters more often (I do), better is to:
+
+```sh
+alias 2='python2'
+alias 3='python3'
+```
+
+ - Tip: Instead of doing:
+  ```sh
+   #!/usr/bin/env python
+   ```
+   
+ - use:
+
+```sh
+#!/usr/bin/env python3
+```
+   - system will use python3 for running python executables.
+
+   - Verify Python version(s) and running version on MAC
+
+- https://stackoverflow.com/questions/33175827/what-version-of-python-is-on-my-mac
 
   ```
   You could have multiple Python versions on your macOS.
